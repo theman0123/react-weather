@@ -1,9 +1,11 @@
 import React from 'react';
-//wrong graphic--needs to be two clouds with snow
-const Icon13d = () => {
-  return (
+
+class Icon13d extends React.Component {
+  render() {
+    //wrong svg graphic???
+    return (
 <svg
-	 width="50.936px" height="42.547px" viewBox="0 0 50.936 42.547" style={{enableBackground:"new 0 0 50.936 42.547"}}
+	 width={this.props.width} height={this.props.height} viewBox="0 0 50.936 42.547" style={{enableBackground:"new 0 0 50.936 42.547"}}
 	 xmlSpace="preserve">
 <g id="_x33_4">
 	<path style={{fill:"#83A5B3"}} d="M19.543,32.76l-0.946-0.547l0.946-0.547c0.326-0.188,0.439-0.606,0.25-0.935
@@ -35,6 +37,7 @@ const Icon13d = () => {
 		c-1.142-1.438-3.037-2.632-6.197-2.632c-0.719-2.954-2.289-4.738-4.014-5.776C30.924,7.761,34.027,4.886,35.57,3.94z"/>
 </g>
 </svg>
-  )
+    )
+  }
 }
 export default Icon13d;

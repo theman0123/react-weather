@@ -10,18 +10,23 @@ const Icon = (props) => {
   const daily = props.forecast;
 
   return daily.map(day => {
-    const name = day.weather[0].icon;
+    const iconKey = day.weather[0].icon;
     const dayName = moment(day.dt_txt)._d;
     const abbr = dayName.toString().split(' ');
     const weekday = `${abbr[0]}, ${abbr[1]} ${abbr[2]}`;
     const city = props.city;
+    const icon = api.getIcons(iconKey);
 
     return (
       <Link key={day.dt_txt} to={{ pathname: `/details/${props.city.name}`, state:{day:day, weekday: weekday, city: city} }}>
         
         <ul className='day'>
           <li className='weekday'> {weekday} </li>
-          <li> <img src={`./app/images/weather-icons/${name}.svg`}/></li>
+          <li>
+            {icon !== undefined 
+              ? icon[0].icon 
+              : <p>can't find image</p>}
+          </li>
         </ul>
       
       </Link>

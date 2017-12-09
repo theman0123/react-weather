@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Icon10d = () => {
-  return (
+class Icon10d extends React.Component {
+  render() {
+    return (
 <svg
-	 width="54.428px" height="42.309px" viewBox="0 0 54.428 42.309" style={{enableBackground:"new 0 0 54.428 42.309"}}
+	 width={this.props.width} height={this.props.height} viewBox="0 0 54.428 42.309" style={{enableBackground:"new 0 0 54.428 42.309"}}
 	 xmlSpace="preserve">
 <g id="_x31_1">
 	<path style={{fill:"#83A5B3"}} d="M38.617,1.49c0-0.824-0.669-1.49-1.492-1.49c-0.822,0-1.49,0.666-1.49,1.49v3.312
@@ -42,6 +43,7 @@ const Icon10d = () => {
 		l-1.658,2.872c-0.412,0.715-0.167,1.628,0.548,2.04c0.714,0.412,1.628,0.168,2.038-0.546L24.781,38.742z"/>
 </g>
 </svg>
-  )
+    )
+  }
 }
 export default Icon10d;

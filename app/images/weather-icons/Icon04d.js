@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Icon04d = () => {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="52.045px" height="26.648px" viewBox="0 0 52.045 26.648" style={{enableBackground:"new 0 0 52.045 26.648"}} xmlSpace="preserve">
+class Icon04d extends React.Component {
+  render() {
+    return (
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width={this.props.width} height={this.props.height} viewBox="0 0 52.045 26.648" enableBackground="new 0 0 52.045 26.648" xmlSpace="preserve">
 	 >
-<path id="_x30_6" style={{fill:"#83A5B3"}} d="M46.119,7.799c-1.287-5.301-6.246-5.569-7.638-5.195C36.976,1.102,34.463,0,31.924,0
+<path id="_x30_6" fill="#83A5B3" d="M46.119,7.799c-1.287-5.301-6.246-5.569-7.638-5.195C36.976,1.102,34.463,0,31.924,0
 	c-3.155,0-5.957,1.531-7.699,3.892c-2.029-1.593-4.926-2.693-7.854-2.693c-6.703,0-12.195,5.182-12.689,11.76
 	C1.482,14.223,0,16.595,0,19.315c0,4.052,3.283,7.334,7.334,7.334h28.281c4.161,0,7.534-3.371,7.541-7.53h3.225
 	c3.127,0,5.664-2.535,5.664-5.663C52.045,13.456,52.071,7.799,46.119,7.799z M35.621,23.841H7.969c-2.738,0-4.76-1.982-4.76-4.547
@@ -15,7 +16,8 @@ const Icon04d = () => {
 	c2.784-0.915,6.604,1.232,6.176,5.386c1.088-0.439,2.178-0.405,2.487-0.405c1.56,0,3.445,1.366,3.445,3.605
 	C49.83,15.467,48.287,17.009,46.385,17.009z"/>
 </svg>
-  )
+    )
+  }
 }
 
 export default Icon04d;

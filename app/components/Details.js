@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import kelvinToFahrenheit from 'kelvin-to-fahrenheit';
+import ReactSVG from 'react-svg';
 
 const Details = (props) => {
   const city = props.location.state.city;
@@ -11,7 +12,12 @@ const Details = (props) => {
   return (
     <div className='column'>
       <ul className='details'>
-        <li> <img src={`../app/images/weather-icons/${weather.icon}.svg`}/></li>
+        <li> 
+          <ReactSVG
+              path={`../app/images/weather-icons/${weather.icon}.svg`}
+              style={{height:'150px', width:'150px'}}
+            />
+        </li>
         <li className=''> {weekday} </li>
         
         <li className='cityDetails' style={{fontSize: '40px'}}> {city.name} </li>
