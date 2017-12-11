@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactRouter, BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ReactSVG from 'react-svg';
 
 import Home from './Home';
 import Forecast from './Forecast';
@@ -11,7 +10,7 @@ import Details from './Details';
 const NavBar = (props) => {
   return (
     <div className='navBar'>
-      <h1>
+      <h1 className='hideOn'>
         {props.title}
       </h1>
       {props.children}
@@ -37,10 +36,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <ReactSVG
-            path='../app/images/pattern.svg'
-            className='pattern'
-          />
+
           <NavBar title='CityWeather'>
             <WeatherForm direction='row' />
           </NavBar>

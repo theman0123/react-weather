@@ -164,3 +164,9 @@ li img {
 .cityDetails {
   padding-top: 25px;
 }
+
+@media screen and (max-width: 600px) {
+    .hideOn {
+        display: none !important;
+    }
+}
